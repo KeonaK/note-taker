@@ -34,14 +34,14 @@ module.exports = function(app){
     //should be able to delete by id
     //syntax app.delete (path, callback)
     app.delete("/api/notes/:id",(req,res) => {
-       const found = noteDB.some(note => note.id === parseInt(req.params.id));
-       
-       if(found){
-           res.JSON({msg: "A note has been deleted", noteDB: noteDB.filter(note => note.id !== parseInt(req.params.id))});
-       };
+       let id = req.params.id;
+       //filtering the array for an id if it does not match what is selected
+       noteDB = noteDB.filter(note => note.id !== id);
     
+       writeToFile();
+       //display current array
+       res.json(noteDB);
     });
-    // writeToFile();
     //put this into a variable 
     // let noteString = JSON.stringify(noteDB);
     //   fs.writeFile(noteFile, noteString, err => {
