@@ -26,17 +26,39 @@ module.exports = function(app){
         }
 
         noteDB.push(newNote);
-        let noteString = JSON.stringify(noteDB);
-      fs.writeFile(noteFile, noteString, err => {
-          if(err){
-             return console.log(err);
-          }
-          console.log("An update has been made!");
-      });
+       writeToFile();
       res.json(noteDB);
     
 
     });
+    //should be able to delete by id
+    //syntax app.delete (path, callback)
+    app.delete("/api/notes/:id",(req,res) => {
+       const found = noteDB.some(note => note.id === parseInt(req.params.id));
+       
+       if(found){
+           res.JSON({msg: "A note has been deleted", noteDB: noteDB.filter(note => note.id !== parseInt(req.params.id))});
+       };
+    
+    });
+    // writeToFile();
+    //put this into a variable 
+    // let noteString = JSON.stringify(noteDB);
+    //   fs.writeFile(noteFile, noteString, err => {
+    //       if(err){
+    //          return console.log(err);
+    //       }
+    //       console.log("An update has been made!");
+    //   });
 
+    function writeToFile(){
+        let noteString = JSON.stringify(noteDB);
+        fs.writeFile(noteFile, noteString, err => {
+                  if(err){
+                     return console.log(err);
+                  }
+                  console.log("An update has been made!");
+              });
+    };
 
 };
