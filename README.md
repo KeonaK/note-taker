@@ -2,6 +2,16 @@
 
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
+## Table of contents
+
+- [Description](#description)
+- [ScreenShot](#ScreenShot)
+- [LaunchonHeroku](#LaunchprojectonHeroku)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Questions](#questions)
+
 ## Description
 
 This project lets the user create and save notes. The saved notes can also be deleted.
@@ -14,16 +24,6 @@ This project lets the user create and save notes. The saved notes can also be de
 ## Launch project on Heroku
 
 https://salty-reaches-79590.herokuapp.com/
-
-## Table of contents
-
-- [Description](#description)
-- [ScreenShot](#ScreenShot)
-- [LaunchonHeroku](#LaunchprojectonHeroku)
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [Questions](#questions)
 
 ## Installation
 
