@@ -8,8 +8,8 @@ This project lets the user create and save notes. The saved notes can also be de
 
 ## Screen Shot
 
-![screen shot]()
-![screen shot]()
+![screen shot](./images/homepage.png)
+![screen shot](./images/notespage.png)
 
 ## Launch project on Heroku
 
