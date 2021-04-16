@@ -18,10 +18,10 @@ https://salty-reaches-79590.herokuapp.com/
 ## Table of contents
 
 - [Description](#description)
+- [ScreenShot](#ScreenShot)
+- [LaunchonHeroku](#LaunchonHeroku)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [Tests](#tests)
 - [License](#license)
 - [Questions](#questions)
 
