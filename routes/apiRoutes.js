@@ -13,7 +13,7 @@ let noteFile= "../db/db.json"
 module.exports = function(app){
    
     app.get("/api/notes", (req, res) => {
-        res.sendFile(path.join(__dirname, noteFile));
+       return res.json(noteDB);
     });
 
     app.post("/api/notes", (req,res) => {
@@ -41,6 +41,7 @@ module.exports = function(app){
        writeToFile();
        //display current array
        res.json(noteDB);
+       res.send();
     });
     //put this into a variable 
     // let noteString = JSON.stringify(noteDB);

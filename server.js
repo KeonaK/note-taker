@@ -4,11 +4,11 @@ const express = require('express');
 const app = express();
 
 const PORT = process.env.PORT || 8080;
+//Body Parser middleware, allows us to use raw json 
+app.use(express.static("public"));
 //handles form submissions to handle url encoded data
 app.use(express.urlencoded({ extended: true }));
- //Body Parser middleware, allows us to use raw json 
  app.use(express.json());
-app.use(express.static("public"));
 
 require('./routes/apiRoutes')(app);
 require('./routes/htmlRoutes')(app);
